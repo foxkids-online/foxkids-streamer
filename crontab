@@ -1,1 +1,1 @@
-* * * * * echo "1" > /dev/stdout
+0 7 * * * sh /mnt/stream.sh > /dev/stdout
