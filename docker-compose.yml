@@ -8,7 +8,7 @@ services:
     image: zipkortnicks57/foxkids_online:streamer
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ./series_settings/:/mnt/:ro
+      - ./foxkids_project/backend/series_settings/stream.sh:/stream.sh:ro
       - /foxkids_full/:/mnt/:ro
     networks:
       - foxkids_network

@@ -1,1 +1,1 @@
-0 7 * * * sh /mnt/stream.sh > /dev/stdout
+0 7 * * * sh /stream.sh > /dev/stdout
