@@ -1,9 +1,7 @@
 FROM alpine:latest
 
-RUN apk -y update
-RUN apk -y upgrade
-RUN apk --no-cache install -y ffmpeg
-RUN apk --no-cache -y install curl
+RUN apk add --no-cache install -y ffmpeg
+RUN apk add --no-cache install curl
 
 COPY crontab /tmp/crontab
 RUN cat /tmp/crontab > /etc/crontabs/root
