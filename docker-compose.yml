@@ -10,6 +10,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./series_settings/stream.sh:/mnt/stream.sh:ro
+      - /foxkids_full/:/mnt/:ro
 networks:
   foxkids_network:
     driver: bridge
