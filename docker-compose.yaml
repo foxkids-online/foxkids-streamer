@@ -1,8 +1,15 @@
 version: "3"
 services:
-  cron_scheduler:
+  streamer:
     build: .
-    container_name: cron_scheduler
+    container_name: streamer
     logging:
       options:
         max-size: "50m"
+    image: zipkortnicks57/foxkids_online:streamer
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./series_settings/stream.sh:/mnt/stream.sh:ro
+networks:
+  foxkids_network:
+    driver: bridge
