@@ -1,7 +1,6 @@
 version: "3"
 services:
   streamer:
-    build: .
     container_name: streamer
     logging:
       options:
@@ -11,6 +10,9 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - ./series_settings/stream.sh:/mnt/stream.sh:ro
       - /foxkids_full/:/mnt/:ro
+    networks:
+      - foxkids_network
+
 networks:
   foxkids_network:
     driver: bridge
