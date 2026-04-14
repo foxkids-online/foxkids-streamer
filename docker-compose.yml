@@ -9,7 +9,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ../backend/series_settings/:/stream/:ro
-      - /foxkids_full/:/mnt/:ro
+      - /mnt/foxkids/:/mnt/:ro
     networks:
       - foxkids_network
 
